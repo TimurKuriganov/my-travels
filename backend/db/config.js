@@ -6,6 +6,7 @@ const options = {
 };
 
 function connectDB() {
+  
   mongoose.connect(process.env.CONNECTION_URL, options)
   .then(() => console.log('MONGODB CONNECTED...'))
   .catch((err) => console.log('ERROR', err));

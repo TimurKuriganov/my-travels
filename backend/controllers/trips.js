@@ -1,7 +1,8 @@
 // to get all trips
-export const getTrips = (req, res, next) => {
+const getTrips = (req, res, next) => {
   res.status(200).json({
-    status: true,
+    status: 'success',
     data: 'allTrips'
   });
 }
+module.exports = { getTrips };
