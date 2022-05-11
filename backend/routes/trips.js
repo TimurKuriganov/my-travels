@@ -1,7 +1,8 @@
 const express = require('express');
+const isLoggedIn = require('../middleware/isLoggedIn');
 const { getTrips } = require('../controllers/trips');
 const router = express.Router();
 
-router.route('/')
-  .get(getTrips)
-  
+router.get('/', isLoggedIn, getTrips);
+
+module.exports = router;
